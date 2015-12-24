@@ -693,6 +693,9 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
                                     left: 0;
                                     position: absolute;
                                     text-align: center;
+                                    padding-top: 0;
+                                    text-transform: none;
+                                    color: #000;
                                     font: 18px 'roboto_condensedlight_italic';}
 .house_heading:before           { content: "1";
                                     width: 35px;
