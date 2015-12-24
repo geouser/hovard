@@ -134,8 +134,11 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
                               }
 .float-right                  {    float: right;}
 
-
-
+h2                                 { font: 36px 'forumregular';
+                                    color: #c3990a;
+                                    margin-bottom: 15px;
+                                    text-transform: uppercase;
+                                    padding-top: 5%;}
 
 
 /* --------------------------------------
@@ -392,11 +395,6 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 .box-feature.central            { background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAgICAgICAgICAgMDAwMDAwMDAwP/2wBDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAnACcDAREAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAQIDBAAK/8QAJRAAAgMAAgICAgIDAAAAAAAAAQIDERIEEwAiISMxMhQzQkRU/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APHS1Sgg52ARQtklDuVnYSigRvKzSf7RXCCwT4E/kEaVtByckCKQyQKU+tWP0SRXq/YcOEhW0xrwBZAWnFIFKlZcKn7AOEKg8RXZz1SmwNEuEEi0BUE1GEJ+GTIjY2qHciJADvriNGSIW0TVKjFTZBywT9GXbkO79iccpK+WKLzOs45EkagtJWeUBYoqxIILBObDbKispTxAGwtmNGSFfWiU40ZBsyGvAchXBIVR6iWUsjyJPG57IEWOTJZiSSiOUad17HoCvAnZH501GVNekyu5Z1dVmbP8uV8HasFj5DBwhqNfAqxWK1tTIuD3JJpAiqqRorvgABmyk9/UVxJ6lSQiEJOVLBrdBiJS4xnuAgcjTsWDvGR9bkyocsAQND8fCC3TDpaqIbcAwkswi4mbaAk+xErGZaPgcAGZSVJLMv4CySsZ47lRpGcLLyuWh3u8clAVXrwF8DQdWx3G0zRIksiE45COsanj8eQxq8rSRplEGXQR0GTGpAy6Wg21yB2FthUQsFRmLW4QD4SSSr5HwqqzabwGzYy0bNfx1NAZX1HHUcY4tqTLEshYR6+qIgWzWqgVFkKK9usJg1FIAahMbN79MTn65BbQP9cvqAfArfXpAzLI45EPI+FUqqkScmECPbR6ZQ0y0HQnsj9fyENEC2Cralsh2UFJssewqpBhkTIMi+/IASqYuAGg7nYfueQZaViY0LnqohmNJDyo4o/mrXjxkf5nwMuUyfhesBdlu2KMiy0SnBacBSSY1H2SMGlerVSFmKxhgnux7TI2FkeOSBCOUiB2jjmlWNx2tapyALNOtEEIY5Ff80aguQtvHviYkYK9ZW4nb2R/ST1I8AAWFKn93pSoVT2O0igmNv6+RJKrgk+kLaZL0o8AWuSQVFR6+IyUWNXwRKpYNNCJ6VQcu8tSPQ+PA1hZHlKLteWpaNUjcRyySRmKTkg8mmA5K7QSSuF7XCqgIU+B/9k=);
                                     background-repeat: repeat;
                                     background-size: 39px;}
-.box-feature.central h2         { font: 36px 'forumregular';
-                                    color: #c3990a;
-                                    margin-bottom: 15px;
-                                    text-transform: uppercase;
-                                    padding-top: 5%;}
 .box-feature.central p          { font: 20px 'roboto_condensedlight';
                                     color: #fff;
                                     padding: 0 5%;}
@@ -672,8 +670,6 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 
 
-
-
 /*---------------------------------------------------------------*/
 /*----------------------- Infrastructure ------------------------*/
 /*---------------------------------------------------------------*/
@@ -824,3 +820,166 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 
 /*---------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------
+Contacts
+---------------------------------------------------------------------*/
+#contacts                               {
+                                            height: 100%;
+                                            width: 100%;
+                                            margin-bottom: -4px;
+                                            background-repeat: repeat;
+                                        }
+#contacts .wrapper                      {
+                                            text-align: right;
+                                            padding-top: 10px;
+                                            width: 100%;
+                                            padding-right: 13%;
+                                        }
+#contacts .feedback, #contacts .flat-image
+                                        {
+                                            display: inline-block;
+                                            height: 100%;
+                                        }
+#contacts .feedback                     {
+                                            width: 33.3%;
+                                            float: left;
+                                            padding-top: 0;
+                                            position: relative;
+                                            background-image: url(../images/contactsBg.png);
+                                            background-repeat: repeat;
+                                            padding-bottom: 2vh;
+                                            padding-top: 120px;
+                                        }
+#contacts .flat-image                   {
+                                            width: 66.6%;
+                                            float: right;
+                                            position: relative;
+                                            background-image: url(../images/flat-image.jpg);
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: 50% 50%;
+                                        }
+#contacts .flat-image:after             {
+                                            content: " ";
+                                            width: 10px;
+                                            height: 100%;
+                                            position: absolute;
+                                            top: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            background: -moz-linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+                                            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+                                            background: -webkit-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+                                            background: -o-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+                                            background: -ms-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+                                            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* W3C */
+                                        }
+#contacts .inner-block                  {
+                                            padding-right: 0;
+                                            text-align: right;
+                                            height: 100%;
+                                        }
+
+#contacts h2                            {    font-size: 25px; color: #000;}
+p.contactUs                             {    font: 22px/24px 'roboto_condensedlight';
+                                             margin: 30px 0;
+                                             width: 95%;
+                                             display: inline-block;
+                                        }
+.addressInfo                            {   font: 18px 'roboto_condensedlight_italic'; margin-bottom: 40px;}
+#contacts p  span                       {   font: 22px 'roboto_condensedbold';}
+.addressInfo a                          {   font: 18px 'roboto_condensedlight'; color: #C3990A; border-bottom: 1px dashed #C3990A;}
+.tel a                                  {   font: 40px 'forumregular';}
+
+
+
+#contacts address                       {
+                                            font-size: 14px;
+                                            text-align: left;
+                                        }
+#contacts .form_layer                   {   width: 325px; display: inline-block;}
+#contacts .form_layer .success          {
+                                            border-radius: 5px;
+                                            border: 1px solid rgba(48, 64, 113, 0.9);
+                                            padding: 10px;
+                                            margin: 10px 0;
+                                        }
+#contacts .form_layer .success p        {    font-size: 14px }
+.contacts form                          {   width: 100%; margin-top: 15px;}
+.contacts form input                    {
+                                            width: 47% !important;
+                                            height: 38px;
+                                            border: 1px solid #000;
+                                            width: 100%;
+                                            margin-bottom: 10px;
+                                            margin-right: 5%;
+                                            background: transparent;
+                                            text-align: right;
+                                            padding-right: 15px;
+                                            color: #000;
+                                            font: 18px 'roboto_condensedlight_italic';
+                                        }
+.contacts form input:nth-child(2)       {   margin-right: 0;}
+.contacts form textarea                 {
+                                            width: 97%;
+                                            height: 72px;
+                                            border: 1px solid #000;
+                                            width: 100%;
+                                            padding-right: 15px;
+                                            padding-top: 10px;
+                                            background: transparent;
+                                            text-align: right ;
+                                            font: 18px 'roboto_condensedlight_italic';
+                                        }
+.contacts form button                   {
+                                            display: inline-block;
+                                            margin-top: 15px;
+                                            height: 44px;
+                                            width: 190px; height: 40px;
+                                            font: 18px 'roboto_condensedlight'; 
+                                            background-color: #C3990A;
+                                            border: none;
+                                            -webkit-border-radius: 5px;
+                                                    border-radius: 5px;
+                                        }
+#contacts footer                        {
+                                            position: relative;
+                                            width: 100%;
+                                            margin-top: 50px;
+                                        }
+#contacts footer .wrapper               {    padding-top: 0 }
+#contacts footer .decor                 {
+                                            bottom: 100%;
+                                            left: 0;
+                                            position: absolute;
+                                            width: 100%;
+                                        }
+#contacts footer .wrapper               {    padding-top: 10px }
+.contacts footer p                      {
+                                            font: 16px 'roboto_condensedlight'; 
+                                            color: #626263;
+                                        }
+
+@media (max-width: 1200px)                             { 
+    #contacts .feedback   {
+                              padding-top: 15px;
+                              width: 40%;
+                          }
+    #contacts .flat-image {    width: 60% }
+}
+@media (max-width: 800px)                             { 
+    #contacts .feedback    {    width: 50% }
+    #contacts .inner-block {    padding-right: 3% }
+    #contacts .flat-image  {    width: 50% }
+    #contacts .wrapper     {    padding-top: 0 }
+    #contacts footer       {    bottom: 0 }
+    #contacts address      {    font-size: 12px }
+}
+
+
+::-moz-placeholder { 
+   opacity:  1;
+}
