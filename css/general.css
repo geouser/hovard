@@ -443,7 +443,8 @@ h2                                 { font: 36px 'forumregular';
 /*---------------------------------------------------------------*/
 /*-------------------------- Location ---------------------------*/
 /*---------------------------------------------------------------*/
-.location .info_block           { width: 33.33%;
+.location .info_block,
+.choose  .info_block          { width: 33.33%;
                                     height: 100%;
                                     overflow: hidden;
                                     float: left;
@@ -454,14 +455,18 @@ h2                                 { font: 36px 'forumregular';
                                     text-align: right;
                                     position: relative;
                                     padding-bottom: 100px;}
-.location .info_block .scrollbar{ height: 100%; position: relative;}
+.location .info_block .scrollbar,
+.choose  .info_block .scrollbar           { height: 100%; position: relative;}
 .location .top                  { margin-bottom: 40px; padding-right: 12%; position: relative;}
 .location h2                    { font: 36px 'forumregular';
                                     color: #c3990a;
                                     text-transform: uppercase;
                                     padding-top: 15.8%;
                                     padding-bottom: 8%;}
-.location p                     { font-size: 22px; color: #fff; padding-left: 15px; margin-bottom: 15px;}
+.location p,
+.choose p                      { font-size: 22px; color: #fff; padding-left: 15px; margin-bottom: 15px;}
+.right p                       { padding-left: 13%;}
+.right h2                      { padding-left: 13%;}
 
 .order_call                     { display: inline-block;
                                     height: 38px;
@@ -536,6 +541,7 @@ h2                                 { font: 36px 'forumregular';
                                         font-size: 22px;
                                         padding-top: 8%;
                                         padding-right: 12%;}
+.right .info_tab p                  { padding: 0 0 0 12%;}
 
 .places_tabs                        { width: 100%;}
 .places_tabs ul                     { padding-right: 12%;}
@@ -590,7 +596,8 @@ h2                                 { font: 36px 'forumregular';
     .location .top              { margin-bottom: 25px; padding-right: 6%;}
     .location h2                { font-size: 36px; padding-top: 4%; padding-bottom: 4%;}
     .location p                 { font-size: 18px;}
-    .info_tab p                 { font-size: 18px; padding-right: 6%;}
+    .info_tab p                 { font-size: 18px;}
+    .right .info_tab p          { }
     .places_tabs ul             { padding-right: 6%;}
     .places_tabs ul li a        { font-size: 15px;}
 
@@ -601,6 +608,101 @@ h2                                 { font: 36px 'forumregular';
 /*---------------------------------------------------------------*/
 
 
+
+.choose .info_block           {float: right; text-align: left;}
+.sliderWrap {width: 66.6%; height: 100%; float: left;}
+.sliderChoose {width: 100%; height: 100%;}
+.sliderWrap   {position: relative;}
+.sliderChoose .slick-track, .sliderChoose .slick-list {width: 100%; height: 100%;}
+.sliderChoose .slick-list .slide  {
+    text-align: center;
+    width: 100%; height: 100%;
+    background-repeat: no-repeat; background-position: 50% 50%; -webkit-background-size: cover;
+     -o-background-size: cover;
+        background-size: cover;
+    }
+.sliderChoose .slide p {
+    color: #000;
+    display: inline-block;
+    text-transform: uppercase;
+    font: 35px 'forumregular';
+    padding: 30px 50px;
+    vertical-align: middle;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaoAAABaCAMAAADetOJpAAAAElBMVEX////////+/v7+/v7///////9yqpP6AAAABXRSTlMAFFyF8xr23gUAAADvSURBVHja7dFJEcNAAASx+Bj+lMPA7+0qiYJ+H653nONz6rk5xkxVzFTFTFXMVMVMVcxUxUxVzFTFTFXMVMVMVcxUxUxVzFTFTFXMVMVMVcxUxUxVzFTFTFXMVMVMVcxUxUxVzFSnylSmajeqUKUKVahShSpUqUIVqlShClWqUIUqVahClSpUoUoVqlClClWqUIUqVZzreVVVpi5VmSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlVlSlV+anfOMfn1B/csjDaaumX5QAAAABJRU5ErkJggg==);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;}
+
+
+.sliderChoose .slick-prev                 {
+                                background: url(../images/svg/prev.svg);
+                                left: 35px;
+                            }
+.sliderChoose .slick-next                 {
+                                background-image: url(../images/svg/next.svg);
+                                right: 35px;
+                            }
+.sliderChoose .slick-prev:hover           {    background: url(../images/svg/prev.svg) }
+.sliderChoose .slick-next:hover           {    background-image: url(../images/svg/next.svg) }
+.sliderChoose .slick-arrow                {
+                                width: 42px;
+                                height: 42px;
+                                background: rgba(255,255,255, .5);
+                                z-index: 10;
+                                -webkit-border-radius: 50%;
+                                        border-radius: 50%;
+                                -webkit-background-size: 100% 100%;
+                                -o-background-size: 100% 100%;
+                                background-size: 100% 100%;
+                                -webkit-transition: all .2s;
+                                   -moz-transition: all .2s;
+                                    -ms-transition: all .2s;
+                                     -o-transition: all .2s;
+                                        transition: all .2s;
+                            }
+.sliderChoose .slick-arrow:hover          {
+                                background: #C3990A;
+                                background-repeat: no-repeat;
+                                -webkit-background-size: 100% 100%;
+                                -o-background-size: 100% 100%;
+                                background-size: 100% 100%;
+                            }
+.sliderChoose .slick-arrow:before {display: none;}
+
+
+.showPos   {width: 80px; height: 80px; line-height: 80px; bottom: 50px; left: 0; right: 0; margin: auto; -webkit-border-radius: 50%;
+        border-radius: 50%; position: absolute; text-align: center; background: rgba(255,255,255, .5); z-index: 10;}
+.pagingInfo {vertical-align: middle; font: 20px 'forumregular'; color: #000;}
+
+
+
+
+
+
+.choose .info_tabs-nav                  { margin-bottom: 30px; padding-left: 13%;} 
+.choose .info_tabs-nav li               { -webkit-box-shadow: none !important; box-shadow: none !important;
+width: auto !important; 
+height: 35px;
+border: 1px solid transparent;
+padding: 0 7px;
+margin: 0 7px;
+display: inline-block;
+float: none;
+-webkit-transition: all .2s;
+   -moz-transition: all .2s;
+    -ms-transition: all .2s;
+     -o-transition: all .2s;
+        transition: all .2s;
+}
+.choose .info_tabs-nav li.ui-state-active  {border: 1px solid #C3990A;}
+.choose .info_tabs-nav li a             { color: #C3990A; border-bottom: 1px dashed #C3990A; font-family: 'roboto_condensedlight';}
+.choose .info_tabs-nav li.ui-state-active a {border-bottom: 1px dashed transparent; font-family: 'roboto_condensedlight';}
+.choose  .info_tabs-nav li::after       { display: none;}
+p.explainTab {font: 16px/24px 'roboto_condensedlight_italic'; color: #7C7C7C; margin: 40px auto 20px; text-align: left; padding-left: 13%;}
+.choose .info_tab button {height: 40px; border: 1px solid #C3990A; -webkit-border-radius: 6px;
+        border-radius: 6px; padding: 0 35px; color: #C3990A; font: 18px 'roboto_condensedlight_italic';
+        background: transparent; float: left; margin-left: 13%;
+        }
 
 /*---------------------------------------------------------------------
 Contacts
