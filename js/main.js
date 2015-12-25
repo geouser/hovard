@@ -51,20 +51,6 @@ jQuery(document).ready(function($) {
     $( "#infra_tabs" ).tabs();
   });
 
-   var $status = $('.pagingInfo');
-   var $slickElement = $('.sliderChoose');
-
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.text(i + '/' + slick.slideCount);
-    });
-
-    $slickElement.slick({
-        autoplay: true,
-        dots: true
-    });
-
 
 
 // Magnific popup initialization
@@ -228,10 +214,27 @@ jQuery(document).ready(function($) {
 
 
 
-// Slick slider initialization (floor_slider)
+// Slick slider initialization (floor_slider, sliderChoose)
   $(function () {
-    $('.flats_slider').slick({})
-  })
+
+    $('.flats_slider').slick();
+
+    var $status = $('.pagingInfo');
+    var $slickElement = $('.sliderChoose');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + '/' + slick.slideCount);
+    });
+
+    $slickElement.slick({
+        autoplay: false,
+        dots: true
+    });
+
+  }) // end
+
 
 
 // Custom functions for floor navigation
