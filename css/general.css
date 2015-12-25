@@ -160,7 +160,10 @@ h2                                 { font: 36px 'forumregular';
                                     right: 0;
                                     z-index: 10;
                                     background-color: rgba(0, 0, 0, 0.5);
-                                    padding: 0 55px;}
+                                    padding: 0 55px;
+                                    -webkit-transition: all 0.3s ease;
+                                         -o-transition: all 0.3s ease;
+                                            transition: all 0.3s ease;}
 .navigation:before              { content: " ";
                                     position: absolute;
                                     left: 0;
@@ -213,16 +216,105 @@ h2                                 { font: 36px 'forumregular';
                                     background-repeat: no-repeat;
                                     background-size: 100%;}
 
-
-@media (max-width: 1500px) {
-    .navigation ul li           { margin-right: 20px;}
+.mobile_menu {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e8b814;
+    border-radius: 6px;
+    color: #e8b814;
+    -webkit-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'roboto_condensedlight';
+    display: none;
+}
+.mobile_menu span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.mobile_menu svg {
+    height: 50%;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.mobile_menu svg path {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.mobile_menu:hover svg path,
+.mobile_menu.active svg path {
+    fill: #fff;
+}
+.mobile_menu:hover,
+.mobile_menu.active {
+    background-color: #e8b814;
+    color: #fff;
 }
 
 
 
 
+@media (max-width: 1500px) {
+    .navigation ul li           { margin-right: 20px;}
+    .navigation ul li a         { font-size: 16px;}
+}
+@media (min-width: ) {
+    .navigation ul              { display: inline-block!important;}
+}
+@media (max-width: 1200px) {
+    .navigation                 { height: 50px; padding: 0 3%;}
+    
+    .mobile_menu                { display: inline-block; margin-top: 4px;}
+    .navigation ul              { visibility: hidden;
+                                    width: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 100%;
+                                    padding: 0 3%;
+                                    height: 53px;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    text-align: justify;
+                                    opacity: 0;
+                                    -webkit-transition: all 0.3s ease;
+                                    -o-transition: all 0.3s ease;
+                                    transition: all 0.3s ease;}
+    
+    .navigation ul.active       { visibility: visible;
+                                    opacity: 1;}
+    .navigation ul li           { width: auto; margin-right: 0; padding: 15px 0 0 0;}
+    .navigation ul:before       { display: none;}
+    .navigation ul:after        {content: ''; height: 0; width: 100%; display: inline-block;}
 
 
+    .navigation:before,
+    .navigation:after           { display: none;}
+}
+
+@media (max-width: 900px) {
+    .navigation ul li a         { font-size: 14px;}
+}
+
+@media (max-width: 750px) {
+
+    .navigation.active                      { background-color: rgba(0, 0, 0, 1);}
+    .navigation ul                          { background-color: rgba(0, 0, 0, 1);
+                                                height: auto;
+                                                padding-bottom: 15px;}
+    .navigation ul li                       { height: 40px;
+                                                line-height: 40px;
+                                                text-align: center;
+                                                padding-top: 0;
+                                                width: 50%;
+                                                float: left;}
+    .navigation ul:after                    { display: none;}
+}
 
 
 
