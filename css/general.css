@@ -792,11 +792,18 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 
 .slick-prev,
-.slick-next                     { width: 60px;
+.slick-next                     {   width: 60px;
                                     height: 60px;
                                     border-radius: 50%;
                                     margin-top: -30px;
-                                    border: 1px solid rgba(0, 0, 0, 0.3)
+                                    border: 1px solid rgba(0, 0, 0, 0.3);
+                                    background-color: rgba(255,255,255, .3);
+                                    z-index: 10;
+                                    -webkit-transition: all .2s;
+                                       -moz-transition: all .2s;
+                                        -ms-transition: all .2s;
+                                         -o-transition: all .2s;
+                                            transition: all .2s;
                                 }
 .slick-prev:before,
 .slick-next:before              { display: none;}
@@ -805,15 +812,18 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
                                     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAFVBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAA9huxxAAAAB3RSTlMAAQMEEURF2b0iIwAAACJJREFUeAFjQABGJDYzKwuczcTKykxzNoLDBuQMHI8FJUAAqMgBMeXhUOMAAAAASUVORK5CYII=);
                                     background-repeat: no-repeat;
                                     background-size: 12px;
-                                    background-position: 50% 50%;}
+                                    background-position: 45% 60%;}
 
 .slick-next                     { right: -120px;
                                     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAFVBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAA9huxxAAAAB3RSTlMAAQMEEURF2b0iIwAAACVJREFUGNNjYGBkQAAWVmYEh5mVlWnAeMxsCA6t2UBvIzkDOUAAqe4BMYCBFbQAAAAASUVORK5CYII=);
                                     background-size: 12px;
                                     background-repeat: no-repeat;
-                                    background-position: 50% 50%;}
+                                    background-position: 57% 60%;}
 
-
+.slick-prev:hover               {background-color: #C3990A; border: 1px solid #C3990A;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAJFBMVEX////////////////////////////////////////////////Vd7HLAAAADHRSTlMAGh02Nzg5dnjw8fI4i33dAAAALUlEQVR4AWNAAEYkNjMnOxKbmw07mwsXm5UINgsKG8HhhHPoz2Pj5EAKBCYGACSnAgb18LBjAAAAAElFTkSuQmCC) !important;
+}
+.slick-next:hover               {background-color: #C3990A; border: 1px solid #C3990A;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAJFBMVEX////////////////////////////////////////////////Vd7HLAAAADHRSTlMAGh02Nzg5dnjw8fI4i33dAAAAL0lEQVQY02NgYGJAAA5ONgSHhZOTecB4LFwIDjKblQg2Gy42N3Y2AzuyMxgYEUwAH0kCBgHZxF0AAAAASUVORK5CYII=)!important;
+} 
 
 
 
@@ -857,42 +867,12 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     background-repeat: no-repeat;
     text-align: center;}
 
-
-.sliderChoose .slick-prev                 {
-                                background: url(../images/svg/prev.svg);
-                                left: 35px;
-                            }
-.sliderChoose .slick-next                 {
-                                background-image: url(../images/svg/next.svg);
-                                right: 35px;
-                            }
-.sliderChoose .slick-prev:hover           {    background: url(../images/svg/prev.svg) }
-.sliderChoose .slick-next:hover           {    background-image: url(../images/svg/next.svg) }
-.sliderChoose .slick-arrow                {
-                                width: 42px;
-                                height: 42px;
-                                background: rgba(255,255,255, .5);
-                                z-index: 10;
-                                -webkit-border-radius: 50%;
-                                        border-radius: 50%;
-                                -webkit-background-size: 100% 100%;
-                                -o-background-size: 100% 100%;
-                                background-size: 100% 100%;
-                                -webkit-transition: all .2s;
-                                   -moz-transition: all .2s;
-                                    -ms-transition: all .2s;
-                                     -o-transition: all .2s;
-                                        transition: all .2s;
-                            }
-.sliderChoose .slick-arrow:hover          {
-                                background: #C3990A;
-                                background-repeat: no-repeat;
-                                -webkit-background-size: 100% 100%;
-                                -o-background-size: 100% 100%;
-                                background-size: 100% 100%;
-                            }
-.sliderChoose .slick-arrow:before {display: none;}
-
+.sliderChoose .slick-prev   {left: 35px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAADHRSTlMAGh02Nzg5dnjw8fI4i33dAAAALUlEQVR4AWNAACYkNhsnB5zNzMnJQnM2gsOF4GDyWInmseHmcePhsSMFAiMDAB0WAgYlXvhRAAAAAElFTkSuQmCC);}
+.sliderChoose .slick-next   {right:35px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAADHRSTlMAGh02Nzg5dnjw8fI4i33dAAAALklEQVQY02NgYGRAAHZOZgSHjRsPjws3j5VoHgtuHgsngkNrNgMHJxtSIDAhmAAm2gIGOS2zOAAAAABJRU5ErkJggg==);}
+.sliderChoose .slick-prev,
+.sliderChoose .slick-next   {border: 1px solid #fff;}
+.sliderChoose .slick-prev:hover,
+.sliderChoose .slick-next:hover   {border: 1px solid #C3990A;}
 
 .showPos   {width: 80px; height: 80px; line-height: 80px; bottom: 50px; left: 0; right: 0; margin: auto; -webkit-border-radius: 50%;
         border-radius: 50%; position: absolute; text-align: center; background: rgba(255,255,255, .5); z-index: 10;}
