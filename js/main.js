@@ -84,41 +84,74 @@ jQuery(document).ready(function($) {
       lng: '30.337495',
       image: 'marker-image.png',
       title: 'Skver',
+      id: '#01',
+      group: 'gr#01'
     },
     {
       lat: '59.918603',
       lng: '30.347194',
       image: 'marker-image.png',
       title: 'Skver2',
+      id: '#02',
+      group: 'gr#01'
     },
     {
       lat: '59.918297',
       lng: '30.354031',
       image: 'marker-image.png',
       title: 'Skver2',
+      id: '#03',
+      group: 'gr#01'
     },
     {
       lat: '59.914838',
       lng: '30.344790',
       image: 'marker-image.png',
       title: 'Skver3',
+      id: '#04',
+      group: 'gr#02'
+    },
+    {
+      lat: '59.915',
+      lng: '30.345',
+      image: 'marker-image.png',
+      title: 'Skver3',
+      id: '#05',
+      group: 'gr#02'
+    },
+    {
+      lat: '59.916',
+      lng: '30.346',
+      image: 'marker-image.png',
+      title: 'Skver3',
+      id: '#06',
+      group: 'gr#03'
+    },
+    {
+      lat: '59.917',
+      lng: '30.347',
+      image: 'marker-image.png',
+      title: 'Skver3',
+      id: '#07',
+      group: 'gr#03'
+    },
+    {
+      lat: '59.918',
+      lng: '30.348',
+      image: 'marker-image.png',
+      title: 'Skver3',
+      id: '#08',
+      group: 'gr#04'
     }
   ];
 
-  var places = [
-    {
-      lat: '59.917656',
-      lng: '30.337495',
-      image: 'marker-image.png',
-      title: 'Skver',
-    },
-    {
-      lat: '59.914838',
-      lng: '30.344790',
-      image: 'marker-image.png',
-      title: 'Skver3',
-    }
-  ]
+// надо так как в певом масиве
+  var places = [];
+
+
+
+
+
 
   var map;
   var markers = [];
@@ -143,8 +176,12 @@ jQuery(document).ready(function($) {
       title: "HOVARD"
     });
 
-    addMarker(points);
+    addMarker(points); 
 
+    for (var i = 0; i < markers.length; i++) {
+    
+    };
+    
 
     $('.selectMarkers').on('click', function(event) {
       event.preventDefault();
@@ -162,34 +199,136 @@ jQuery(document).ready(function($) {
       addMarker(points);
     });
 
+    $('.group-selector').on('click', function(event) {
+      event.preventDefault();
+      var pointsNm = $(this).attr('data-main-group');
+      var group = $(this).attr('data-group');
+
+      switch (pointsNm) {
+        case 'infrastructure':
+          var points = infrastructure;
+          break;
+        case 'places':
+          var points = places;
+          break;
+      } // end switch
+      deleteMarkers()
+      addMarkerGroup(points, group);
+    });
+
+    $('.place-selector').on('click', function(event) {
+      event.preventDefault();
+      $('.place-selector').parent().removeClass('active');
+      $(this).parent().addClass('active');
+      var pointsNm = $(this).attr('data-main-group');
+      var group = $(this).attr('data-group');
+      var id = $(this).attr('place-id');
+      console.log(id)
+
+      switch (pointsNm) {
+        case 'infrastructure':
+          var points = infrastructure;
+          break;
+        case 'places':
+          var points = places;
+          break;
+      } // end switch
+      deleteMarkers()
+      addMarkerPlace(points, group, id);
+    });
+
     // Adds a Main marker at the center of the map
     addMarker(mapCenter);
   }
 
 
 
+  var infowindow = null;
+
+  /* now inside your initialise function */
+  infowindow = new google.maps.InfoWindow({
+    content: "holding..."
+  });
+
+
   // Adds a marker to the map and push to the array
   function addMarker(points) {
     for (var i = 0; i < points.length; i++) {
       var latLng = new google.maps.LatLng(points[i]['lat'], points[i]['lng']);
+      var content = points[i]['image'];
       var markerImage = new google.maps.MarkerImage('images/y_marker.png');
       var marker = new google.maps.Marker({
         position: latLng,
         icon: markerImage,
         map: map
       });
+
+      google.maps.event.addListener(marker, 'click', function () {
+        // where I have added .html to the marker object.
+        infowindow.setContent('<img src="images/'+content+'">');
+        infowindow.open(map, this);
+      });
+
       markers.push(marker);
     }
   };
 
-  function addOneMarker(){
+  // Adds a marker to the map and push to the array
+  function addMarkerGroup(points, group) {
+    for (var i = 0; i < points.length; i++) {
 
-  }
+      if (points[i]['group'] == group) {
+          var latLng = new google.maps.LatLng(points[i]['lat'], points[i]['lng']);
+          var content = points[i]['image'];
+          var markerImage = new google.maps.MarkerImage('images/y_marker.png');
+          var marker = new google.maps.Marker({
+            position: latLng,
+            icon: markerImage,
+            map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', function () {
+            // where I have added .html to the marker object.
+            infowindow.setContent('<img src="images/'+content+'">');
+            infowindow.open(map, this);
+          });
+
+          markers.push(marker);  
+        }; // end if  
+    } // end loop
+  }; // end AddMarkerGroup
+
+  // Adds a marker to the map and push to the array
+  function addMarkerPlace(points, group, id) {
+    for (var i = 0; i < points.length; i++) {
+      if ( (points[i]['group'] == group) && (points[i]['id'] == id) ) {
+          var latLng = new google.maps.LatLng(points[i]['lat'], points[i]['lng']);
+          var content = points[i]['image'];
+          var markerImage = new google.maps.MarkerImage('images/y_marker.png');
+          var marker = new google.maps.Marker({
+            position: latLng,
+            icon: markerImage,
+            map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', function () {
+            // where I have added .html to the marker object.
+            infowindow.setContent('<img src="images/'+content+'">');
+            infowindow.open(map, this);
+          });
+
+          markers.push(marker);  
+        }; // end if  
+    } // end loop
+  }; // end AddMarkerGroup
+
 
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
     for (var i = 0; i < markers.length; i++) {
+
       markers[i].setMap(map);
+
     }
   }
 

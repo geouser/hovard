@@ -169,48 +169,39 @@
 
                                 <div id="places_tabs" class="places_tabs">
                                     <ul>
-                                        <li><a href="#places_tabs-1">Соборы и храмы</a></li>
-                                        <li><a href="#places_tabs-2">Музеи</a></li>
-                                        <li><a href="#places_tabs-3">Театры</a></li>
-                                        <li><a href="#places_tabs-4">Школы и сады</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-1" data-group="gr#01" data-main-group="infrastructure">Школы</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-2" data-group="gr#02" data-main-group="infrastructure">Магазины</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-3" data-group="gr#03" data-main-group="infrastructure">Больницы</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-4" data-group="gr#04" data-main-group="infrastructure">Кинотеатры</a></li>
                                     </ul>
 
                                     <div id="places_tabs-1" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#01" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#02" href="">Александринский театр</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#03" href="">БДТ им. Г.А. Товстоногова</a></li>
+
+                                            <a data-group="gr#01" data-main-group="infrastructure" href="" class="show_all group-selector">Все школы</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-2" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#02" data-main-group="infrastructure" place-id="#04" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#02" data-main-group="infrastructure" place-id="#05" href="">Александринский театр</a></li>
+                                            <a data-group="gr#02" data-main-group="infrastructure" href="" class="show_all group-selector">Все магазины</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-3" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#03" data-main-group="infrastructure" place-id="#06" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#03" data-main-group="infrastructure" place-id="#07" href="">Александринский театр</a></li>
+                                            <a data-group="gr#03" data-main-group="infrastructure" href="" class="show_all group-selector">Все больницы</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-4" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#04" data-main-group="infrastructure" place-id="#08" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <a data-group="gr#04" data-main-group="infrastructure" href="" class="show_all group-selector">Все кинотеатры</a>
                                         </ul>
                                     </div>
                                 </div> <!-- end #places_tabs -->
@@ -469,6 +460,10 @@
             </div> <!-- end flats -->
 
 
+
+
+
+
             <div class="section choose clearfix">
 
                 <div class="sliderWrap">
@@ -546,7 +541,67 @@
 
                     <button class="next_slide"></button>    
                 </div> <!-- end info_block -->
-            </div> <!-- end location -->
+            </div> <!-- end choose -->
+
+
+
+            <div class="section process">
+                <div class="box-feature vertical" style="background-image: url(images/pr-01.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-02.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-03.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-04.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature central">
+                    <h2>Ход строительства<br>клубного дома</h2>
+                    <p>Наведите на фотографию мышью, чтобы изучить информацию детально.</p>
+                    <button class="next_slide"></button>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-06.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-07.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-08.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-09.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+            </div><!-- end process -->
+
+
 
             <div class="section contacts clearfix" id="contacts">
                 <div class="feedback">
