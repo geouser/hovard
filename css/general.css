@@ -716,13 +716,14 @@ h2                                 { font: 36px 'forumregular';
 .places_tabs                        { width: 100%;}
 .places_tabs ul                     { padding-right: 12%;}
 .places_tabs ul li                  { display: inline-block;
-                                        padding: 1px 10px;
                                         vertical-align: middle;
+                                        padding: 1px 5px;
                                         border: 1px solid transparent;
                                         -webkit-transition: all 0.3s ease;
                                              -o-transition: all 0.3s ease;
                                                 transition: all 0.3s ease;}
-.places_tabs ul li.ui-tabs-active   { border-color: #c3990a;}
+.places_tabs ul li.ui-tabs-active   { border-color: #c3990a;
+                                        padding: 1px 10px;}
 .places_tabs ul li a                { font-size: 18px;
                                         color: #c3990a;
                                         border-bottom: 1px dashed #c3990a;}
@@ -836,25 +837,78 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .location .top              { margin-bottom: 25px; padding-right: 6%;}
     .location h2                { font-size: 36px; padding-top: 4%; padding-bottom: 4%;}
     .location p                 { font-size: 18px;}
-    .info_tab p                 { font-size: 18px;}
+    .info_tab p                 { font-size: 18px; padding-right: 6%;}
     .right .info_tab p          { }
     .places_tabs ul             { padding-right: 6%;}
     .places_tabs ul li a        { font-size: 15px;}
 
     .places_tab ul li           { margin-right: 6%;}
+    .places_tab .show_all       { margin-right: 6%;}
 }
 
+@media (max-width: 1200px) {
+    .location                   {height: 600px!important; min-height: auto!important}
+    .places_tabs ul             { padding-right: 3%;}
+    .places_tab ul li           { margin: 0; padding-right: 3%;}
+    .places_tabs ul li a        { font-size: 14px;}
+    .location .top              { padding-right: 3%;}
+    .info_tab p                 { font-size: 16px; padding-right: 3%;} 
+    .places_tab .show_all       { margin-right: 3%;}
+}
+
+@media (max-width: 1000px) {
+  .location .info_block,
+  .choose  .info_block      { width: 100%; height: 400px; float: none;}
+  .location .map_block      { width: 100%; height: 400px; float: none;}
+
+  .location                 { height: auto!important;}
+
+  .location .top            { width: 50%; float: left; padding-right: 0; text-align: center;}
+  .info_tabs                { width: 50%; float: right;}
+  .location .order_call     { margin-top: 40px;}
+  .location p               { padding: 0 2%;}
+
+
+  .info_tabs-nav            { overflow: hidden;}
+  .info_tabs-nav li:after   { display: none;}
+  .info_tabs-nav li.ui-tabs-active:after {display: none;}
+  .info_tabs-nav li         { border-bottom: 1px solid #c3990a}
+  .info_tabs-nav li.ui-tabs-active {border: 1px solid #c3990a;
+                                        border-bottom-width: 0;
+                                        border-top-left-radius: 10px;
+                                        border-top-right-radius: 10px;}
+
+  .location .info_tabs      { height: 285px;}
+  .info_tab p               { padding-top: 3%;}
+
+  .location .next_slide     { left: 25%;}
+
+}
 
 @media (max-height: 800px) {
   .location .info_block,
   .choose  .info_block   {padding-top: 40px;}
+  .location .info_tabs-nav li a   { font-size: 16px!important;}
 }
-@media (max-width: 1000px) {
-  .location .info_block,
-  .choose  .info_block     {width: 100%; height: 400px;}
-  .location .top           {width: 30%; padding-right: 5px !important; float: left;}
-  .info_tabs               {width: 68%; float: right;}
+
+@media (max-width: 700px) {
+    .location .top              { width: 100%;}
+    .location .info_block       { height: auto; padding-bottom: 75px;}
+    .location .next_slide       { left: 50%;} 
+    .location .info_tabs        { height: auto!important;}
+
+    .location .info_tabs        { width: 100%; padding: 0 2%;}
+    .location .map_block        { height: 300px;}
 }
+
+@media (max-width: 400px) {
+    .location p                 { font-size: 16px;}
+    .location .order_call       { margin-top: 20px; margin-bottom: 15px;}
+    .location .info_tabs-nav li a   { font-size: 12px!important;}
+    .places_tabs ul li a        { font-size: 12px;}
+    .location h2                { font-size: 30px;}
+}
+
 
 
 /*---------------------------------------------------------------*/
@@ -883,7 +937,8 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
                                     -moz-box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.75);
                                     box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.75);
                                     text-align: center;
-                                    position: relative;}
+                                    position: relative;
+                                    overflow: hidden;}
 .house_heading                  { width: 100%;
                                     top: 110px;
                                     left: 0;

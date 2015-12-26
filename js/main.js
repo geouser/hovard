@@ -50,7 +50,30 @@ jQuery(document).ready(function($) {
       suppressScrollX: true
     });
 
+  function updateScrollings(){
+    if ( $(window).width() <= 1000 ) {
+      $('.scrolled_area').removeClass('scrollbar');
+      $('.scrolled_area').perfectScrollbar('destroy');
+    } else if ( $(window).width() > 1001 ) {
+      $('.scrolled_area').addClass('scrollbar');
+      $('.scrolled_area').perfectScrollbar({
+        suppressScrollX: true
+      });
+    };
+  } // end
+
+  updateScrollings();
+  $(window).resize(function(event) {
+    updateScrollings();
   });
+
+  });
+
+
+
+
+
+
 
 
 // jQueryUI tabs initialization
