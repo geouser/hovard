@@ -843,6 +843,16 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 
 
+@media (max-height: 800px) {
+  .location .info_block,
+  .choose  .info_block   {padding-top: 40px;}
+}
+@media (max-width: 1000px) {
+  .location .info_block,
+  .choose  .info_block     {width: 100%; height: 400px;}
+  .location .top           {width: 30%; padding-right: 5px !important; float: left;}
+  .info_tabs               {width: 68%; float: right;}
+}
 
 
 /*---------------------------------------------------------------*/
@@ -1051,24 +1061,41 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 
 
-.choose .info_block                 { float: right; text-align: left;}
-.sliderWrap                         { width: 66.6%; height: 100%; float: left;}
 
-.sliderChoose                       { width: 100%;
-                                        height: 100%;}
-
-.sliderWrap                         { position: relative;}
-.sliderChoose .slick-track,
-.sliderChoose .slick-list           { width: 100%; height: 100%;}
-
-.sliderChoose .slick-list .slide    { text-align: center;
-                                        width: 100%; height: 100%;
-                                        background-repeat: no-repeat; background-position: 50% 50%; -webkit-background-size: cover;
-                                         -o-background-size: cover;
+.choose .info_block                     {
+                                            float: right;
+                                            text-align: left;
+                                        }
+.sliderWrap                             {
+                                            width: 66.6%;
+                                            height: 100%;
+                                            float: left;
+                                        }
+.sliderChoose                           {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+.sliderWrap                             {    position: relative }
+.sliderChoose .slick-track, .sliderChoose .slick-list
+                                        {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+.sliderChoose .slick-list .slide        {
+                                            text-align: center;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-repeat: no-repeat;
+                                            background-position: 50% 50%;
+                                            -webkit-background-size: cover;
+                                            -o-background-size: cover;
                                             background-size: cover;
-                                        -webkit-box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);
-                                           -moz-box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);
-                                                box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);}
+                                            -webkit-box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);
+                                            -moz-box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);
+                                            box-shadow: inset 0px 0px 93px 26px rgba(0,0,0,0.75);
+                                        }
+
+
 .sliderChoose .slide .text          {
                                         color: #000;
                                         display: inline-block;
@@ -1160,6 +1187,59 @@ p.explainTab                                {font: 16px/24px 'roboto_condensedli
     .sliderChoose .slide .text p            { font-size: 28px;}
     .sliderChoose .slide .text              { width: 75%;}
 }
+
+
+
+@media (max-height: 800px) {
+  .location .info_block,
+  .choose  .info_block   {padding-top: 40px;}
+}
+
+@media (max-width: 1000px) {
+  .sliderWrap               {width: 100%; height: 600px;}
+  .sliderChoose .slick-prev {left: 2%;}
+  .sliderChoose .slick-next {right: 2%;}
+  .sliderChoose .slide .text p {font-size: 24px;}
+
+
+  .choose .info_block  {height: auto;}
+  .choose .info_tabs   {width: 100%;}
+  .choose .right h2    {display: inline-block; width: 38%; padding-top: 0; margin-bottom: 20px;}
+  .choose .right p    {display: inline-block; width: 60%; vertical-align: top;}
+  #choose_tabs .info_tab>img {width: 50%; display: inline-block; vertical-align: top; padding-left: 3%;}
+  #choose_tabs .info_tab p   {width: 46%; display: inline-block; vertical-align: top;}
+  .choose .info_tab button   {margin: 20px auto; display: block; float: none;}
+  p.explainTab               {margin-top: 20px; font: 15px/20px 'roboto_condensedlight_italic';}
+  .info_tabs-nav li a        {font-size: 18px;}
+}
+@media (max-width: 750px) {
+  .sliderWrap          {height: 400px;}
+  .choose .right p     {font-size: 16px;}
+  #choose_tabs .info_tab>img {width: 50%; display: inline-block; vertical-align: top; padding-left: 3%;}
+  #choose_tabs .info_tab p   {width: 46%; display: inline-block; vertical-align: top;}
+  p.explainTab               {padding-left: 2%;}
+
+    .sliderChoose .slide .text p {font-size: 20px;}
+    .sliderChoose .slide .text   {height: auto; padding: 5px 0; width: 70%;}
+    .showPos                     {bottom: 20px;}
+
+    .slick-prev, .slick-next     {width: 35px; height: 35px; background-size: 26% 40%;}
+}
+@media (max-width: 600px) {
+  .choose .right p           {font-size: 16px; display: block; width: 100%;}
+  #choose_tabs .info_tab>img {width: 100%; margin-bottom: 20px; padding-left: 0%;}
+  #choose_tabs .info_tab p   {width: 100%; padding: 0 5px 0 6%;}
+      .sliderChoose .slide .text p {font-size: 18px;}
+}
+@media (max-width: 450px) {
+  .choose .right p           {font-size: 14px; }
+  .info_tabs-nav li a        {font-size: 16px;}
+      .sliderChoose .slide .text p {font-size: 15px;}
+}
+@media (max-width: 360px) {
+  .info_tabs-nav li a        {font-size: 14px;}
+}
+
 
 /*---------------------------------------------------------------------
 Process
