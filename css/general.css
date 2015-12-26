@@ -466,13 +466,13 @@ h2                                 { font: 36px 'forumregular';
 
 @media (max-width: 1100px) {
     .features                   { width: 100%;
-                                    height: 430px;
                                     background-image: none;
                                     -moz-background-clip: border;     /* Firefox 3.6 */
                                  -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
                                          background-clip: border-box;
                                     border: 10px solid rgba(0, 0, 0, 0.5);
                                     padding: 0;
+                                    height: 215px;
                                     border-radius: 10px;
                                     overflow: hidden;}
     .features .box .content     { background-image: none!important;
@@ -489,7 +489,7 @@ h2                                 { font: 36px 'forumregular';
 
 @media (max-width: 800px) {
     .offer                      { height: 800px!important;}
-    .features                   { width: 80%; height: 400px;}
+    .features                   { width: 80%; height: 430px;}
     .features .box .head        { height: 25%;}
     .features .box .content     { height: 75%;}
     .features .box              { width: 50%; height: 50%;}
@@ -503,6 +503,17 @@ h2                                 { font: 36px 'forumregular';
 @media (max-width: 450px) {
     .offer                      { height: auto!important; padding-top: 150px; padding-bottom: 80px;}
     .main_logo                  { margin-bottom: 60px;}
+    .features                   { height: auto;
+                                    border-width: 0;
+                                    border-radius: 0;
+                                    width: 290px;}
+    .features .box              { height: auto;
+                                    width: 100%;
+                                    margin-bottom: 15px;
+                                    border-radius: 10px;
+                                    overflow: hidden;}
+    .features .box .head        { height: 45px;}
+    .features .box .content     { padding-bottom: 10px;}
 }
 
 
@@ -572,11 +583,27 @@ h2                                 { font: 36px 'forumregular';
 }
 
 
+@media (max-width: 1200px) {
+    .section.about              { height: 640px!important;}
+    .box-feature .text          { background-image: none;
+                                    width: 95%;
+                                    background-color: rgba(255, 255, 255, 0.5);
+                                    border: 1px solid #fff;}
+    .box-feature:hover .text    { background-image: none;}
+}
 
 
+@media (max-width: 1000px) {
+    .section.about              { height: auto!important;}
+    .box-feature                { width: 50%; height: 220px;}
+    .box-feature                { border: none!important;}
+    .box-feature.central        { width: 100%;}
+}
 
 
-
+@media (max-width: 600px) {
+    .box-feature                { width: 100%; border-bottom: 1px solid #fff!important;}
+}
 
 
 
@@ -827,6 +854,15 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 
 
+@media (max-width: 1200px) {
+    .infrastructure             { height: 640px!important;}
+}
+
+@media (max-width: 1000px) {
+    .infrastructure             { height: auto!important;}
+}
+
+
 /*---------------------------------------------------------------*/
 /*------------------------- Flats_picker ------------------------*/
 /*---------------------------------------------------------------*/
@@ -889,12 +925,43 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .house_heading              { top: 85px;}
 }
 
+@media (max-width: 1200px) {
+    .section.house              { height: auto!important;
+                                    min-height: auto;
+                                    padding: 50px 0 80px;
+                                    -webkit-box-shadow: inset 0px 0px 79px 19px rgba(0,0,0,0.75);
+                                       -moz-box-shadow: inset 0px 0px 79px 19px rgba(0,0,0,0.75);
+                                            box-shadow: inset 0px 0px 79px 19px rgba(0,0,0,0.75);}
+    .interactive_house          { width: 85%;}
+    .house_heading              { top: 30px;}
+}
 
+@media (max-width: 1000px) {
+    .interactive_house          { width: 100%;}
+}
+
+@media (max-width: 700px) {
+    .interactive_house          { width: 120%;
+                                    margin-left: -10%;}
+}
+
+@media (max-width: 550px) {
+    .section.house              { padding: 80px 0;
+                                    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+                                       -moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+                                            box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);}
+    .house_heading              { padding: 0 5%;}
+    .house_heading:before       { display: none;}
+}
+
+
+/**/
 .section.flats                  { padding-top: 70px;
                                     -webkit-box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.75);
                                     -moz-box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.75);
                                     box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.75);
                                     text-align: center;}
+
 .section.flats .house_heading:before {content: "2"}
 
 .flats_slider                   { width: 50%;
@@ -1112,6 +1179,11 @@ Process
     opacity: 1;
 }
 
+
+@media (max-width: 1200px) {
+    .process                { height: 640px!important;}
+    .process .box-feature .text {background-image: none; opacity: 1;}
+}
 
 
 
