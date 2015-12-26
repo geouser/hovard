@@ -1057,7 +1057,36 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
     .slick-next                 { width: 50px; height: 50px; margin-top: -25px;}
 }
 
-
+@media (max-width: 1200px) {
+    .section.flats              { height: 650px;}
+}
+@media (max-width: 800px) {
+    .section.flats              { height: 500px; -webkit-box-shadow: none;
+            box-shadow: none;}
+    .flats_slider               { width: 80%;}
+    .floor-slide .label         { font-size: 17px;}
+    .flats_slider .slick-prev   { left: -60px;}
+    .flats_slider .slick-next   { right: -60px;}
+}
+@media (max-width: 700px) {
+    .flats_slider               { width: 80%;}
+    .flats_slider .slick-prev   { left: -40px;}
+    .flats_slider .slick-next   { right: -40px;}
+    .floor-slide .label         { font-size: 15px;}
+}
+@media (max-width: 500px) {
+    .flats_slider               { width: 98%; margin-top: -60px;}
+    .flats_slider .slick-prev   { top: 120%; left: 40%;}
+    .flats_slider .slick-next   { top: 120%; right: 40%;}
+    .house_heading {top: 60px;}
+}
+@media (max-width: 400px) {
+    .floor-slide .label         { font-size: 12px; top: 90%;}
+}
+@media (max-width: 370px) {
+    .flats_slider .slick-prev   { left: 37%;}
+    .flats_slider .slick-next   { right: 37%;}
+}
 
 /*---------------------------------------------------------------*/
 
