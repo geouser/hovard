@@ -604,7 +604,7 @@ h2                                 { font: 36px 'forumregular';
 
 
 @media (max-width: 600px) {
-    .box-feature                { width: 100%; border-bottom: 1px solid #fff!important;}
+    .box-feature                { width: 100%; border-bottom: 4px solid #fff!important;}
 }
 
 
