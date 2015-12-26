@@ -820,7 +820,7 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
   .location .info_block,
   .choose  .info_block   {padding-top: 40px;}
 }
-@media (max-height: 1000px) {
+@media (max-width: 1000px) {
   .location .info_block,
   .choose  .info_block     {width: 100%; height: 400px;}
   .location .top           {width: 30%; padding-right: 5px !important; float: left;}
