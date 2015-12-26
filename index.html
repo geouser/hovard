@@ -29,7 +29,15 @@
     <body>
 
         <div class="navigation">
-            <ul class="vertical">
+            <button class="mobile_menu">
+                <span>Меню</span>
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="73.168px" height="73.168px" viewBox="0 0 73.168 73.168" style="enable-background:new 0 0 73.168 73.168;" xml:space="preserve">
+                    <path fill="#e8b814" d="M4.242,14.425h64.684c2.344,0,4.242-1.933,4.242-4.324c0-2.385-1.898-4.325-4.242-4.325H4.242
+                    C1.898,5.776,0,7.716,0,10.101C0,12.493,1.898,14.425,4.242,14.425z M68.926,32.259H4.242C1.898,32.259,0,34.2,0,36.584 c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.933,4.242-4.325C73.168,34.2,71.27,32.259,68.926,32.259z M68.926,58.742H4.242C1.898,58.742,0,60.683,0,63.067c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.935,4.242-4.325
+                    C73.168,60.683,71.27,58.742,68.926,58.742z"/>
+                </svg>
+            </button>
+            <ul class="vertical clearfix">
                 <li><a href="" class="active">Главная</a></li>
                 <li><a href="">О проекте</a></li>
                 <li><a href="">Местоположение</a></li>
@@ -169,48 +177,39 @@
 
                                 <div id="places_tabs" class="places_tabs">
                                     <ul>
-                                        <li><a href="#places_tabs-1">Соборы и храмы</a></li>
-                                        <li><a href="#places_tabs-2">Музеи</a></li>
-                                        <li><a href="#places_tabs-3">Театры</a></li>
-                                        <li><a href="#places_tabs-4">Школы и сады</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-1" data-group="gr#01" data-main-group="infrastructure">Школы</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-2" data-group="gr#02" data-main-group="infrastructure">Магазины</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-3" data-group="gr#03" data-main-group="infrastructure">Больницы</a></li>
+                                        <li><a class="group-selector" href="#places_tabs-4" data-group="gr#04" data-main-group="infrastructure">Кинотеатры</a></li>
                                     </ul>
 
                                     <div id="places_tabs-1" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#01" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#02" href="">Александринский театр</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#01" data-main-group="infrastructure" place-id="#03" href="">БДТ им. Г.А. Товстоногова</a></li>
+
+                                            <a data-group="gr#01" data-main-group="infrastructure" href="" class="show_all group-selector">Все школы</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-2" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#02" data-main-group="infrastructure" place-id="#04" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#02" data-main-group="infrastructure" place-id="#05" href="">Александринский театр</a></li>
+                                            <a data-group="gr#02" data-main-group="infrastructure" href="" class="show_all group-selector">Все магазины</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-3" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#03" data-main-group="infrastructure" place-id="#06" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#03" data-main-group="infrastructure" place-id="#07" href="">Александринский театр</a></li>
+                                            <a data-group="gr#03" data-main-group="infrastructure" href="" class="show_all group-selector">Все больницы</a>
                                         </ul>
                                     </div>
                                     <div id="places_tabs-4" class="places_tab">
                                         <ul>
-                                            <li class="vertical"><a href="">БДТ им. Г.А. Товстоногова</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Драматический театр им. В.Ф Комиссаржевской</a></li>
-                                            <li class="vertical"><a href="">Александринский театр</a></li>
-                                            <li class="vertical"><a href="">Театр Юного Зрителя</a></li>
-                                            <a href="" class="show_all">Все достопримечательности</a>
+                                            <li class="vertical"><a class="place-selector" data-group="gr#04" data-main-group="infrastructure" place-id="#08" href="">БДТ им. Г.А. Товстоногова</a></li>
+                                            <a data-group="gr#04" data-main-group="infrastructure" href="" class="show_all group-selector">Все кинотеатры</a>
                                         </ul>
                                     </div>
                                 </div> <!-- end #places_tabs -->
@@ -469,6 +468,10 @@
             </div> <!-- end flats -->
 
 
+
+
+
+
             <div class="section choose clearfix">
 
                 <div class="sliderWrap">
@@ -477,19 +480,29 @@
                    </div>
                     <div class="sliderChoose">
                         <div class="slide vertical" style="background-image: url(images/chooseSlider/slide-7.jpg);">
-                            <p>Потолок с гипсокартонным карнизом</p>
+                            <div class="text vertical">
+                                <p>Потолок с гипсокартонным карнизом</p>
+                            </div>
                         </div>
                         <div class="slide vertical" style="background-image: url(images/chooseSlider/slide-7.jpg);">
-                            <p>2 Потолок с гипсокартонным карнизом</p>
+                            <div class="text vertical">
+                                <p>Потолок с гипсокартонным карнизом</p>
+                            </div>
                         </div>
                          <div class="slide vertical" style="background-image: url(images/chooseSlider/slide-7.jpg);">
-                            <p>2 Потолок с гипсокартонным карнизом</p>
+                            <div class="text vertical">
+                                <p>Потолок с гипсокартонным карнизом Потолок с гипсокартонным карнизом</p>
+                            </div>
                         </div>
                          <div class="slide vertical" style="background-image: url(images/chooseSlider/slide-7.jpg);">
-                            <p>2 Потолок с гипсокартонным карнизом</p>
+                            <div class="text vertical">
+                                <p>Потолок с гипсокартонным карнизом</p>
+                            </div>
                         </div>
                          <div class="slide vertical" style="background-image: url(images/chooseSlider/slide-7.jpg);">
-                            <p>2 Потолок с гипсокартонным карнизом</p>
+                            <div class="text vertical">
+                                <p>Потолок с гипсокартонным карнизом</p>
+                            </div>
                         </div>
                     </div>
 
@@ -519,15 +532,15 @@
                             </div> <!-- end #info_tab-1 -->
 
                             <div id="choose_tab-2" class="info_tab">
-                                 <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
-                                 <button>
+                                <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
+                                <button>
                                     Запросить планировки
                                 </button>  
                             </div><!-- end #info_tab-2 -->
 
                              <div id="choose_tab-3" class="info_tab">
-                                 <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
-                                 <button>
+                                <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
+                                <button>
                                     Запросить планировки
                                 </button>  
                             </div><!-- end #info_tab-3 -->
@@ -536,7 +549,67 @@
 
                     <button class="next_slide"></button>    
                 </div> <!-- end info_block -->
-            </div> <!-- end location -->
+            </div> <!-- end choose -->
+
+
+
+            <div class="section process">
+                <div class="box-feature vertical" style="background-image: url(images/pr-01.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-02.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-03.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-04.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature central">
+                    <h2>Ход строительства<br>клубного дома</h2>
+                    <p>Наведите на фотографию мышью, чтобы изучить информацию детально.</p>
+                    <button class="next_slide"></button>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-06.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-07.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-08.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+                <div class="box-feature vertical" style="background-image: url(images/pr-09.jpg);">
+                    <div class="text vertical">
+                        <h3>12 октября 2015 года<br>
+                        <strong>Завершение работы строителей</strong></h3>
+                    </div>
+                </div>
+            </div><!-- end process -->
+
+
 
             <div class="section contacts clearfix" id="contacts">
                 <div class="feedback">
