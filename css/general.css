@@ -258,7 +258,9 @@ h2                                 { font: 36px 'forumregular';
 }
 
 
-
+@media (max-height: 800px) {
+    .navigation                 { height: 50px;}
+}
 
 @media (max-width: 1500px) {
     .navigation ul li           { margin-right: 20px;}
@@ -1306,11 +1308,14 @@ Contacts
                                             width: 66.6%;
                                             float: right;
                                             position: relative;
-                                            background-image: url(../images/flat-image.jpg);
                                             background-repeat: no-repeat;
                                             background-size: cover;
                                             background-position: 50% 50%;
                                         }
+@media (min-width: 700px)                             { 
+   #contacts .flat-image                {background-image: url(../images/flat-image.jpg);}
+}
+
 #contacts .flat-image:after             {
                                             content: " ";
                                             width: 10px;
@@ -1413,14 +1418,30 @@ p.contactUs                             {    font: 22px/24px 'roboto_condensedli
                                             color: #626263;
                                         }
 
+@media (max-height: 800px)                             { 
+p.contactUs          {margin: 5px 0 10px 0;}
+.addressInfo         {margin-bottom: 10px;}
+#contacts footer     {margin-top: 5px;}
+#contacts .feedback  {padding-top: 30px;}
+}
+
+@media (max-width: 1500px)                             { 
+    #contacts .wrapper    {padding-right: 6%;}
+    p.contactUs           {font: 20px/22px 'roboto_condensedlight'}
+}
 @media (max-width: 1200px)                             { 
     #contacts .feedback   {
                               padding-top: 15px;
                               width: 40%;
                           }
     #contacts .flat-image {    width: 60% }
+    
+    p.contactUs           {font: 18px/20px 'roboto_condensedlight'}
+    .addressInfo          {font-size: 16px;}
+    #contacts p span      {font-size: 20px;}
+    .tel a                {font-size: 36px;}
 }
-@media (max-width: 800px)                             { 
+@media (max-width: 900px)                             { 
     #contacts .feedback    {    width: 50% }
     #contacts .inner-block {    padding-right: 3% }
     #contacts .flat-image  {    width: 50% }
@@ -1428,6 +1449,17 @@ p.contactUs                             {    font: 22px/24px 'roboto_condensedli
     #contacts footer       {    bottom: 0 }
     #contacts address      {    font-size: 12px }
 }
+@media (max-width: 700px)                             { 
+    #contacts .feedback    {    width: 100% }
+    #contacts              {    height: auto;}
+}
+@media (max-width: 400px)                             { 
+    #contacts .inner-block {    padding-right: 5px }
+    #contacts .wrapper     {    padding-right: 5px;}
+    #contacts .form_layer  {    width: 95%;}
+    .contacts form input   {   margin-right: 4%;}
+}
+
 
 
 ::-moz-placeholder { 
