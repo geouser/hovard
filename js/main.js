@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
     });
 
     $slickElement.slick({
-        autoplay: true,
+        autoplay: false,
         dots: true
     });
 
