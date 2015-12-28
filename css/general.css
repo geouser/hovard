@@ -1287,6 +1287,9 @@ p.explainTab                                {font: 16px/24px 'roboto_condensedli
 @media (max-width: 1200px) {
   .section.choose         {height: 600px; min-height: auto;}
 }
+@media (max-width: 1000px) {
+  .section.choose         {height: auto!important; min-height: auto!important;}
+}
 
 @media (max-height: 800px) {
   .location .info_block,
@@ -1363,7 +1366,9 @@ Process
     .process                { height: 640px!important;}
     .process .box-feature .text {background-image: none; opacity: 1;}
 }
-
+@media (max-width: 1000px) {
+  .process                { height: auto!important;}
+}
 
 
 
