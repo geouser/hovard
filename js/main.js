@@ -30,6 +30,13 @@ jQuery(document).ready(function($) {
     $('.one_page').moveDown();
   });
 
+  $('.nav a').on('click', function(event) {
+    event.preventDefault();
+    $('.nav a').removeClass('active');
+    $(this).addClass('active');
+    $('.one_page').moveTo( $(this).attr('index') );
+  });
+
 
 
 // Top menu functions 
@@ -442,14 +449,6 @@ jQuery(document).ready(function($) {
     }); // end click event function
 
   }); // end main function
-
-  $('.nav a').click(function(event){
-      event.preventDefault;
-      $('html, body').animate({
-          scrollTop: $( $(this).attr('href') ).offset().top
-      }, 800);
-      return false;
-  });
 
  
 
