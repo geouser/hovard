@@ -37,8 +37,6 @@ jQuery(document).ready(function($) {
     $('.one_page').moveTo( $(this).attr('index') );
   });
 
-
-
 // Top menu functions 
   $(function(){
     $('.mobile_menu').on('click', function(event) {
