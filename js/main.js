@@ -4,6 +4,7 @@
 #############################
 */
 
+
 jQuery(document).ready(function($) {
 
 // OnePage scroll
@@ -442,20 +443,14 @@ jQuery(document).ready(function($) {
 
   }); // end main function
 
+  $('.nav a').click(function(event){
+      event.preventDefault;
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 800);
+      return false;
+  });
 
-});
+ 
 
-    var $status = $('.pagingInfo');
-    var $slickElement = $('.sliderChoose');
-
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.text(i + '/' + slick.slideCount);
-    });
-
-    $slickElement.slick({
-        autoplay: true
-    });
-
-
+})

@@ -158,7 +158,7 @@ h2                                 { font: 36px 'forumregular';
                                     top: 0;
                                     left: 0;
                                     right: 0;
-                                    z-index: 10;
+                                    z-index: 100;
                                     background-color: rgba(0, 0, 0, 0.5);
                                     padding: 0 55px;
                                     -webkit-transition: all 0.3s ease;
@@ -334,7 +334,6 @@ h2                                 { font: 36px 'forumregular';
                                             box-shadow: inset 0px 0px 142.5px 108px rgba(0,0,0,0.75);
                                     position: relative;
                                     padding-top: 70px;}
-
 .guard                          { width: 130px;
                                     position: absolute;
                                     left: 90px;
@@ -460,9 +459,10 @@ h2                                 { font: 36px 'forumregular';
 
 
 @media (max-width: 1200px) {
-    .onepage-wrapper .section   { height: auto; min-height: 100%;}
-    .offer                      { padding-top: 50px; height: 620px!important;}
+    .onepage-wrapper .section   { height: auto;}
+    .offer                      { padding: 50px 0 80px; height: 620px!important;}
     .guard                      { left: 50px; top: 80px;}
+    .next_slide                 { display: none;}
     .main_logo                  { margin-bottom: 10px;}
 }
 
@@ -490,7 +490,7 @@ h2                                 { font: 36px 'forumregular';
 }
 
 @media (max-width: 800px) {
-    .offer                      { height: 800px!important;}
+    .offer                      { height: 800px!important; padding-bottom: 0;}
     .features                   { width: 80%; height: 430px;}
     .features .box .head        { height: 25%;}
     .features .box .content     { height: 75%;}
@@ -599,7 +599,8 @@ h2                                 { font: 36px 'forumregular';
     .section.about              { height: auto!important;}
     .box-feature                { width: 50%; height: 220px;}
     .box-feature                { border: none!important;}
-    .box-feature.central        { width: 100%;}
+    .box-feature.central        { width: 100%; height: auto; padding: 85px 0;}
+    .box-feature.central h2     { padding-top: 0;}
 }
 
 
@@ -847,7 +848,7 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 
 @media (max-width: 1200px) {
-    .location                   {height: 600px!important; min-height: auto!important}
+    .location                   {height: 600px!important;}
     .places_tabs ul             { padding-right: 3%;}
     .places_tab ul li           { margin: 0; padding-right: 3%;}
     .places_tabs ul li a        { font-size: 14px;}
@@ -867,6 +868,8 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
   .info_tabs                { width: 50%; float: right;}
   .location .order_call     { margin-top: 40px;}
   .location p               { padding: 0 2%;}
+
+  .location .info_block .scrollbar {height: 230px;}
 
 
   .info_tabs-nav            { overflow: hidden;}
@@ -994,7 +997,7 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 @media (max-width: 1200px) {
     .section.house              { height: auto!important;
-                                    min-height: auto;
+                                    min-height: auto!important;
                                     padding: 50px 0 80px;
                                     -webkit-box-shadow: inset 0px 0px 79px 19px rgba(0,0,0,0.75);
                                        -moz-box-shadow: inset 0px 0px 79px 19px rgba(0,0,0,0.75);
@@ -1005,6 +1008,12 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 
 @media (max-width: 1000px) {
     .interactive_house          { width: 100%;}
+}
+
+@media (max-width: 800px) {
+    .section.house              { -webkit-box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.0);
+                                    -moz-box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.0);
+                                    box-shadow: inset 0px 0px 158px 37px rgba(0,0,0,0.0);}
 }
 
 @media (max-width: 700px) {
@@ -1113,7 +1122,7 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
 }
 
 @media (max-width: 1200px) {
-    .section.flats              { height: 650px;}
+    .section.flats              { height: 550px;}
 }
 @media (max-width: 800px) {
     .section.flats              { height: 500px; -webkit-box-shadow: none;
