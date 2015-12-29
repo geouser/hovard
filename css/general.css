@@ -159,7 +159,7 @@ h2                                 { font: 36px 'forumregular';
                                     left: 0;
                                     right: 0;
                                     z-index: 100;
-                                    background-color: rgba(0, 0, 0, 0.5);
+                                    background-color: rgba(0, 0, 0, 0.7);
                                     padding: 0 55px;
                                     -webkit-transition: all 0.3s ease;
                                          -o-transition: all 0.3s ease;
@@ -168,7 +168,7 @@ h2                                 { font: 36px 'forumregular';
                                     position: absolute;
                                     left: 0;
                                     top: 100%;
-                                    border-top: 36px solid rgba(0, 0, 0, 0.5);
+                                    border-top: 36px solid rgba(0, 0, 0, 0.7);
                                     border-right: 60px solid transparent;
                                     width: 0;
                                     height: 0;}
@@ -176,7 +176,7 @@ h2                                 { font: 36px 'forumregular';
                                     position: absolute;
                                     right: 0;
                                     top: 100%;
-                                    border-top: 36px solid rgba(0, 0, 0, 0.5);
+                                    border-top: 36px solid rgba(0, 0, 0, 0.7);
                                     border-left: 60px solid transparent;
                                     width: 0;
                                     height: 0;}
@@ -266,9 +266,7 @@ h2                                 { font: 36px 'forumregular';
     .navigation ul li           { margin-right: 20px;}
     .navigation ul li a         { font-size: 16px;}
 }
-@media (min-width: ) {
-    .navigation ul              { display: inline-block!important;}
-}
+
 @media (max-width: 1200px) {
     .navigation                 { height: 50px; padding: 0 3%;}
     
@@ -281,7 +279,7 @@ h2                                 { font: 36px 'forumregular';
                                     top: 100%;
                                     padding: 0 3%;
                                     height: 53px;
-                                    background-color: rgba(0, 0, 0, 0.5);
+                                    background-color: rgba(0, 0, 0, 0.7);
                                     text-align: justify;
                                     opacity: 0;
                                     -webkit-transition: all 0.3s ease;
@@ -1039,6 +1037,11 @@ a[href^="https://maps.google.com/maps"] {    display: none !important }
                                             box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);}
     .house_heading              { padding: 0 5%;}
     .house_heading:before       { display: none;}
+}
+
+@media (max-width: 480px) {
+  .interactive_house            { width: 160%; margin-left: -34%;}
+  .section.house                { padding-bottom: 0;}
 }
 
 
