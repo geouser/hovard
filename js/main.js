@@ -456,7 +456,20 @@ jQuery(document).ready(function($) {
     $('.floor').on('click', function(event) {
       event.preventDefault();
       var slide = $(this).attr('floor-index') - 1;
-      $('.one_page').moveDown();
+
+      var top = $('#floor_section').position().top;
+      $(window).resize(function(event) {
+        top = $('#floor_section').position().top;
+      });
+
+      if ( $(window).width() < responsiveValue) {
+        $('html, body').animate({
+                scrollTop: top
+            }, 800);
+      } else if ( $(window).width() >= responsiveValue) {
+        $('.one_page').moveDown();
+      }
+
       $('.flats_slider').slick('slickGoTo', slide);
     });
 
