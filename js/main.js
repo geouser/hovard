@@ -34,33 +34,33 @@ jQuery(document).ready(function($) {
     $('.one_page').moveDown();
   });
 
-  $('.nav a').on('click', function(event) {
-    if ( $(window).width() >= responsiveValue) {
-      event.preventDefault();
-      $('.nav a').removeClass('active');
-      $(this).addClass('active');
-      $('.one_page').moveTo( $(this).attr('index') );
-    }
-  });
 
   function Navigate(){
-    if ( $(window).width() < responsiveValue) {
-      $('.nav a').on('click', function(event) {
-        event.preventDefault();
+    $('.nav a').on('click', function(event) {
+      event.preventDefault();
+
+      var target = $(this).attr('href');
+      var top = $(target).position().top;
+      $(window).resize(function(event) {
+       top = $(target).position().top;
+      });
+
+      if ( $(window).width() < responsiveValue) {
         $('.nav a').removeClass('active');
         $(this).addClass('active');
-
-        var target = $(this).attr('href');
-        var top = $(target).position().top;
-        $(window).resize(function(event) {
-         top = $(target).position().top;
-        });
         $('html, body').animate({
                 scrollTop: top
             }, 800);
-      });
-    };  
-  };
+      }
+
+      if ( $(window).width() >= responsiveValue) {
+        $('.nav a').removeClass('active');
+        $(this).addClass('active');
+        $('.one_page').moveTo( $(this).attr('index') );
+      }
+
+    }); 
+  }; // end navigate
 
   Navigate();
 
