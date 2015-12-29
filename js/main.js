@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 
 
   function Navigate(){
-    $('.nav a').on('click', function(event) {
+    $('.nav a').add('.anchor').on('click', function(event) {
       event.preventDefault();
 
       var target = $(this).attr('href');
