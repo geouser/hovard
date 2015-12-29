@@ -163,7 +163,7 @@
                         <div class="top">
                             <h2>Местоположение</h2>
                             <p>Клубный дом расположен в <strong>историческом центре</strong> Санкт- Петербурга,  между  набережной реки Фонтанки и Загородным проспектом.</p>
-                            <button class="order_call">Записаться на осмотр</button>    
+                            <button class="order_call magnific" href="#modal-popup">Записаться на осмотр</button>    
                         </div>
 
                         <div class="info_tabs" id="info_tabs">
@@ -535,7 +535,7 @@
                                     <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg"></a>
                                 </div>
                                 <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
-                                <button>
+                                <button href="#modal-popup-2" class="magnific">
                                     Запросить планировки
                                 </button>  
                             </div> <!-- end #info_tab-1 -->
@@ -555,7 +555,7 @@
                                     <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg"></a>
                                 </div>
                                 <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
-                                <button>
+                                <button href="#modal-popup-2" class="magnific">
                                     Запросить планировки
                                 </button>  
                             </div><!-- end #info_tab-2 -->
@@ -575,7 +575,7 @@
                                     <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg"></a>
                                 </div>
                                 <p class="explainTab">Неоклассици́зм — термин, применяемый в российском искусствоведении для обозначения художественных явлений последней трети XIX и XX века, которым присуще обращение к традициям искусства античности, искусства эпохи Возрождения или классицизма (эпохи барокко).</p>
-                                <button>
+                                <button href="#modal-popup-2" class="magnific">
                                     Запросить планировки
                                 </button>  
                             </div><!-- end #info_tab-3 -->
@@ -667,7 +667,7 @@
                             </p>
                             <p class="formS"><span>Форма обратной связи:</span></p>
                             <div class="form_layer">
-                                <form action="#" name="feedback">
+                                <form action="#" name="feedback" class="contactForm">
                                     <input type="text"   pattern="^[A-Za-zА-Яа-яЁё\s0-9]{3,}" name="uname" placeholder="Ваше имя" required="required" />
                                     <input type="tel"  name="tel" placeholder="Телефон" required="required" />
                                     <textarea name="umsg" placeholder="Сообщение"></textarea>
@@ -686,15 +686,31 @@
 
                 <div class="flat-image"></div>
 
+                <div id="modal-popup" class="mfp-hide zoom-anim-dialog popupForm">
+                    <form action="#" name="feedback" class="contactForm">
+                        <input type="text"   pattern="^[A-Za-zА-Яа-яЁё\s0-9]{3,}" name="uname" placeholder="Ваше имя" required="required" />
+                        <input type="email"  name="uemail" placeholder="Ваш email" required="required" />
+                        <textarea name="umsg" placeholder="Сообщение"></textarea>
+                        <button class="href"><img src="images/box-icon.png" alt=""><span>Записаться на осмотр</span></button>
+                    </form>
+                </div>
+
+                <div id="modal-popup-2" class="mfp-hide zoom-anim-dialog popupForm">
+                    <form action="#" name="feedback" class="contactForm">
+                        <input type="text"   pattern="^[A-Za-zА-Яа-яЁё\s0-9]{3,}" name="uname" placeholder="Ваше имя" required="required" />
+                        <input type="email"  name="uemail" placeholder="Ваш email" required="required" />
+                        <textarea name="umsg" placeholder="Сообщение"></textarea>
+                        <button class="href"><img src="images/box-icon.png" alt=""><span>Запросить планировки</span></button>
+                    </form>
+                </div>
+
             </div> <!-- end contacts -->
 
         </div> <!-- end one_page scroll block -->
 
+
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
-
-
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
 
         <script src="jhttps://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
